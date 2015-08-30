@@ -37,7 +37,6 @@ Example SQL Table structures with 8 players:
 | 11 |      5 |     6 |
 | 12 |      7 |     8 |
         
-        
 - Wins View <br>
 
 | id | player | wins |
