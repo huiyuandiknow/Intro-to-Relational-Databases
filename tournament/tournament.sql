@@ -27,14 +27,14 @@ create table matches
 
 -- create view on number of wins
 create view wins AS
-select p.id, p.player, coalesce(sum(m.winner),0) as wins
+select p.id, p.player, coalesce(count(m.winner),0) as wins
 from players as p left join matches as m
 on p.id = m.winner
 group by p.id; 
 
 -- create view on number of loses
 create view loses AS
-select p.id, p.player, coalesce(sum(m.loser),0) as wins
+select p.id, p.player, coalesce(count(m.loser),0) as wins
 from players as p left join matches as m
 on p.id = m.loser
 group by p.id; 
